@@ -9,6 +9,26 @@
 - [2025/5] Token Recycling is accepted by ACL2025!
 
 ---
+
+## Contents
+- [Contents](#contents)
+- [Introduction](#introduction)
+  - [Background: Retrieval-Based Speculative Decoding](#background-retrieval-based-speculative-decoding)
+  - [Token Recycling: Turning Trash into Treasure! 🔄](#token-recycling-turning-trash-into-treasure-)
+  - [Experimental Results 📊](#experimental-results-)
+- [Usage](#usage)
+  - [Install](#install)
+  - [Project Structure](#project-structure)
+  - [Inference](#inference)
+    - [Quick Start](#quick-start)
+    - [Advanced Usage](#advanced-usage)
+    - [Candidate Storage Configuration 🛠️](#candidate-storage-configuration-️)
+    - [Tree Structure Configuration 🌳](#tree-structure-configuration-)
+- [Todo](#todo)
+- [Citation](#citation)
+
+
+
 ## Introduction 
 We introduce Token Recycling:
 - A plug-and-play speculative decoding method to accelerate LLM inference~
@@ -56,22 +76,7 @@ On SpecBench, TR achieves more than a 2x speedup on the 7B model, nearly 30% hig
 TR is also compared with the SOTA speculative decoding methods - [Eagle1/2](https://github.com/SafeAILab/EAGLE) on SpecBench. It is a surprise that, despite being completely training-free and self-drafting, TR outperforms Eagle1. Moreover, TR achieves 91.23% of the acceleration performance of Eagle2 while only requiring 0.39% of the memory used by Eagle2. It is worth noting that TR still employs a static tree, rather than the dynamic tree used in Eagle2. This highlights the remarkable effectiveness and efficiency of TR and shows potential for further improvement when combine TR with dynamic trees.
 
 
-## Contents
-- [Introduction](#introduction)
-  - [Background: Retrieval-Based Speculative Decoding](#background-retrieval-based-speculative-decoding)
-  - [Token Recycling: Turning Trash into Treasure! 🔄](#token-recycling-turning-trash-into-treasure-)
-  - [Experimental Results 📊](#experimental-results-)
-- [Contents](#contents)
-- [Usage](#usage)
-  - [Install](#install)
-  - [Project Structure](#project-structure)
-  - [Inference](#inference)
-    - [Quick Start](#quick-start)
-    - [Advanced Usage](#advanced-usage)
-    - [Candidate Storage Configuration 🛠️](#candidate-storage-configuration-️)
-    - [Tree Structure Configuration 🌳](#tree-structure-configuration-)
-- [Todo](#todo)
-- [Citation](#citation)
+
 
 
 ## Usage
@@ -130,7 +135,7 @@ python -m evaluation.inference_recycling \
 
 You can customize the number of candidate tokens stored for each token in the vocabulary using the `--output-id-topk` argument. This parameter controls how many high-probability "treasure" tokens are collected from the output distribution to build and update the adjacency matrix. 
 
-For implementation details, you can refer to [`evaluation/inference_recycling.py`](evaluation/inference_recycling.py#L232), where the model's output logits are processed to select these top-k candidates.
+For implementation details, you can refer to [`evaluation/inference_recycling.py`](evaluation/inference_recycling.py#L232).
 
 #### Tree Structure Configuration 🌳
 
