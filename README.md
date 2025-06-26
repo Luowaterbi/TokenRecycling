@@ -1,7 +1,7 @@
 <div align="center">
 <h1>
-<img src="./images/recycling.png" width="50" alt="🔄" style="vertical-align: middle;">
-&nbsp;Turning Trash into Treasure: Accelerating Inference of Large Language Models with Token Recycling</h1></div>
+<img src="./images/recycling.png" width="50" alt="🔄" style="vertical-align: middle;margin-right: 10px">
+Turning Trash into Treasure: Accelerating Inference of Large Language Models with Token Recycling</h1></div>
 
 <p align="center">
 | <a href="https://arxiv.org/abs/2408.08696"><b>Paper</b></a> | <a href=""><b>Slide</b></a> | <a href=""><b>Poster</b></a> | <a href=""><b>Video</b></a> | 
