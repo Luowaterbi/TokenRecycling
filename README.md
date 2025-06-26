@@ -1,4 +1,7 @@
-<div align="center"><h1>&nbsp;Turning Trash into Treasure: Accelerating Inference of Large Language Models with Token Recycling</h1></div>
+<div align="center">
+<h1>
+<img src="./images/recycling.png" width="50" alt="🔄" style="vertical-align: middle;">
+&nbsp;Turning Trash into Treasure: Accelerating Inference of Large Language Models with Token Recycling</h1></div>
 
 <p align="center">
 | <a href="https://arxiv.org/abs/2408.08696"><b>Paper</b></a> | <a href=""><b>Slide</b></a> | <a href=""><b>Poster</b></a> | <a href=""><b>Video</b></a> | 
@@ -6,6 +9,7 @@
 
 ---
 *News* 🔥
+- [2025/6] Token Recycling is selected as **Oral** presentation at ACL2025! See you in Vienna! 🇦🇹
 - [2025/5] Token Recycling is accepted by ACL2025!
 
 ---
